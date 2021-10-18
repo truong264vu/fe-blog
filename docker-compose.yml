@@ -57,7 +57,7 @@ services:
     image: 'node:13.7'
     container_name: 'npm_${APP_NAME}'
     volumes:
-      - './src:/var/www/html'
+      - './:/var/www/html'
     working_dir: /var/www/html
     entrypoint:
       - npm
