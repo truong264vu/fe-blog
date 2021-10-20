@@ -1,5 +1,5 @@
 {
-  "name": "fe",
+  "name": "package.json",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -52,5 +52,17 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "npm install -d",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truong264vu/fe-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/truong264vu/fe-blog/issues"
+  },
+  "homepage": "https://github.com/truong264vu/fe-blog#readme"
 }
