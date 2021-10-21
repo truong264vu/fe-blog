@@ -1,6 +1,6 @@
 const axios = require('axios');
-// const apiUrl = 'http://34.96.176.166/api/'
-const apiUrl = 'http://localhost:82/api/'
+const apiUrl = 'http://34.96.176.166/api/'
+// const apiUrl = 'http://localhost:82/api/'
 
 
 export default {
