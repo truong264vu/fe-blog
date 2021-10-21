@@ -19,7 +19,7 @@
       <thead>
           <tr>
             <!-- <th >stt</th> -->
-            <th scope="col" style="width:5%;">id</th>
+            <th scope="col" style="width:5%;">Stt</th>
             <th scope="col" style="width:40%;">Title</th>
             <th scope="col" style="width:10%;">Category</th>
             <th scope="col" style="width:15%;">Operation</th>
@@ -386,7 +386,7 @@ export default {
       outline: none;
     }
     #navbar input[type=submit]:hover {
-      background: rgb(3, 62, 240);
+      background: #8E4119;
     }
     #navbar input[type=text] {
       padding: 4px 20px;
@@ -528,7 +528,7 @@ export default {
     }
      #create-category button {
         height: 50px;
-        background: rgb(107, 107, 233);
+        background: #8E4119;
         color: white;
         font-weight: 600;
         padding: 0px 10px;
@@ -601,7 +601,7 @@ export default {
     }
      #notification-delete-category {
       width: 400px;
-      height: 100px;
+      height: 150px;
       position: fixed;
       top: 50%;
       left: 50%;
@@ -610,13 +610,18 @@ export default {
       border: 1px solid black;
       text-align: center;
       z-index: 5;
+      border-radius: 6px;
+    }
+    #notification-delete-category p  {
+        margin-top: 20px;
     }
      #notification-delete-category div button {
           margin: 10px;
           padding: 2px 10px;
-          background: rgb(107, 107, 233);
+          background: #8E4119;
           color: white;
           font-weight: 600;
+          border-radius: 3px;
           
     }
      #notification-delete-category span {
@@ -632,6 +637,8 @@ export default {
         opacity: 30%;
         background: rgb(207, 158, 158);
         z-index: 4;
+        text-indent: -100000px;
+
      }
     #operation-form {
       text-align: right;
@@ -909,7 +916,7 @@ export default {
 
      #notification-delete-category {
       width: 320px;
-      height: 100px;
+      height: 150px;
       font-size: 12px;
     }
      #notification-delete-category div button {
@@ -930,6 +937,7 @@ export default {
      }
         #notification-delete-category p {
        padding-top: 10px;
+       margin-top: 10px;
      }
      #background-notification-delete-category {
         position: fixed;

@@ -168,6 +168,7 @@ export default {
         display: flex;
         padding-left: 25%;
         align-items: center;
+        position: relative;
     } 
     .header .main-header #slogan h1{
         font-size: 70px;
@@ -185,7 +186,12 @@ export default {
     }
     .header .main-header #category {
         display: flex;
-        margin-left: -50%;
+        /* margin-left: -50%; */
+        position: absolute;
+        left: 10%;
+        bottom: 25%;
+        /* transform: translate(-50%,-50%); */
+        /* background: rgb(100, 36, 36); */
         }
     .header .main-header #category ul li  {
         font-size: 20px;
@@ -195,8 +201,7 @@ export default {
         border-bottom: 2px solid white;
         border-radius: 10px;
         color: rgb(255, 255, 255);
-
-        /* font-weight: 600; */
+        font-family: monospace;
     }
 
     .header .main-header #category ul li:hover {
@@ -278,15 +283,14 @@ export default {
         margin-left: -20px;
         font-style: italic;
     }
-    .header .main-header #category {
-        display: flex;
-        margin-left: -30%;
-        }
+
     .header .main-header #category ul li  {
         font-size: 14px;
-        padding: 2px 10px;
+        padding: 2px 5px;
         border-radius: 5px;
-        /* font-weight: 600; */
+        margin: 0px -6px;
+        font-weight: 600;
+        border-bottom: 2px solid rgb(252, 239, 239);
     }
     .container {
         width: 96%;
@@ -323,29 +327,40 @@ export default {
     } 
     .header .main-header #slogan h1{
         font-size: 20px;
-        margin-top: 40px;
+        margin-top: 50px;
         margin-bottom: 5px; 
-        margin-left: -100px;
+        margin-left: -30px;
     }
     .header .main-header #slogan p {
         font-size: 14px;
-        margin-bottom: 20px;
+        margin-bottom: 70px;
         margin-left: -50px;
         font-style: italic;
+        border-bottom: 1px solid white;
 
     }
     .header .main-header #category {
-        display: flex;
+        bottom: -30%;
+        left: 50%;
+        background: rgb(255, 255, 255);
+        width: 100%;
+        transform: translate(-50%,-50%);
         justify-content: center;
-        margin-left: -80px;
-        
-        }
+        height: 40px;
+        line-height: 40px;
+        margin-left: -10px;
+    }
     .header .main-header #category ul li  {
         font-size: 14px;
-        padding: 2px 6px;
-        border-radius: 2px;
-        border-bottom: 1px solid white;
-        /* font-weight: 600; */
+        padding: 0px 6px;
+        margin: 0px 2px;
+        border-radius: 0px;
+        border: none;
+        color: black;
+        border-bottom: 2px solid black;
+    }
+    .header .main-header #category ul li:hover  {
+        color: rgb(49, 44, 44);
     }
     .container {
         width: 96%;
