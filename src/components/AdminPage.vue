@@ -930,15 +930,6 @@ export default {
         transition: top 5s , opacity 1s;;
     }
 
-     #create-category button {
-        height: 30px;
-        background: blue;
-        color: white;
-        font-weight: 600;
-        padding: 0px 6px;
-        border-radius: 4px;   
-        margin: 0px 6px;     
-     }
     #select-category > #input-category ,   #create-category input {
         width: 200px;
         padding: 0px 10px;
@@ -987,6 +978,12 @@ export default {
     #create-category  p {
         color: red;
         font-size: 12px;
+     }
+    #create-category button {
+        height: 30px;
+        background: blue;
+        color: white;  
+        font-size: 12px; 
      }
 
     #page  { 
