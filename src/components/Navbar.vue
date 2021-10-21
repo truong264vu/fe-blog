@@ -34,7 +34,14 @@
                         
                         <transition name="slide-fade">
                             <ul v-show="info">
-                                <li >{{user.username}}</li>
+        
+                                <li style="font-weight:600;
+                                    font-size:18px; 
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis; 
+                                    width:240px "
+                                >{{user.username}}</li>
                                 <li >{{user.email}}</li>
                                 <li @click="notification_change_avatar = true , info = false ">Change Avatar</li>
                                 <li v-show="admin" @click="getPageAdmin(), info = false">Admin Page</li>
@@ -281,7 +288,7 @@ export default {
         background: rgb(255, 255, 255);
         align-items: center;
         position: fixed;
-        z-index: 1;
+        z-index: 2;
         border-bottom: 1px solid rgb(233, 220, 220);
     }
     #menu {
@@ -439,12 +446,14 @@ export default {
         text-align: center;
         border-radius: 10px;
         background: rgb(238, 236, 231);
+        width: 300px;
     }
     #right #user  ul li {
         height: 40px;
         line-height: 40px;
         text-align: left;
         padding: 0px 10px;
+        font-size: 16px;
     }
     #right #user  ul li:hover {
         height: 40px;
@@ -454,6 +463,7 @@ export default {
     }
     #notification-change-avatar{
             position: fixed;
+            z-index: 1;
 
     }
     #notification-change-avatar > div:nth-child(1){
