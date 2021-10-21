@@ -21,8 +21,6 @@
             <!-- <th >stt</th> -->
             <th scope="col" style="width:5%;">id</th>
             <th scope="col" style="width:40%;">Title</th>
-            <th scope="col" style="width:15%;">Short Content</th>
-            <th scope="col" style="width:10%;" >Content</th>
             <th scope="col" style="width:10%;">Category</th>
             <th scope="col" style="width:15%;">Operation</th>
             
@@ -36,17 +34,11 @@
               <td style="font-weight:600">
                   {{data.title}}
               </td>
-              <td>
+              <!-- <td>
                   <p id="short-content">
                     {{data.short_content}}
                   </p>
-              </td>
-              <td >
-                  <p v-html="data.content" id="content">
-                    {{data.content}}
-                  </p>
-
-              </td>
+              </td> -->
               <td >
                 <div v-for="category in data.categories" :key="category.id">
                   {{category.name}}
@@ -385,7 +377,7 @@ export default {
       margin-bottom: 20px;
     }
     #navbar input[type=submit]{
-      background: rgb(0, 121, 235);
+      background: #8E4119;
       padding: 5px 20px;
       color: rgb(255, 255, 255);
       border: 2px solid rgb(158, 143, 143);
@@ -475,6 +467,8 @@ export default {
     }
     #form h1 {
       text-align: center;
+      border-bottom: 1px solid black;
+      margin-bottom: 30px;
     }
     #form label {
       font-size: 25px;
@@ -494,13 +488,6 @@ export default {
       height: 200px;
     }
 
-    tbody   #content {
-      white-space: nowrap; 
-      width: 100px; 
-      height: 40px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
     tbody #short-content {
       white-space: nowrap; 
       width: 200px; 
@@ -682,31 +669,18 @@ export default {
       height:30px ;
       width: 200px;
     }
-
-    tbody   #content {
-      white-space: nowrap; 
-      width: 50px; 
-      height: 40px;
-      font-size: 12px;
-    }
-    tbody #short-content {
-      width: 100px; 
-      height: 40px;
-      font-size: 14px;
-    }
     tbody button {
       padding: 2px 5px;
       border-radius: 3px;
-      font-size: 13px;
-      width: 60px;
+      font-size: 12px;
+      width: 40px;
       margin-top: 10px;
-      width: 60px;
     }
     thead th {
-      font-size: 14px;
+      font-size: 12px;
     }
     tbody tr {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     #form > div {
@@ -840,30 +814,21 @@ export default {
 
 @media  (max-width: 500px) {
         #navbar input[type=submit]{
-      padding: 1px 6px;
+      padding: 1px 4px;
       border-radius: 4px;
-      font-size: 10px;
+      font-size: 12px;
       height: 30px;
     }
 
     #navbar input[type=text] {
-      padding: 1px 6px;
-      font-size: 10px;
+      padding: 1px 4px;
+      font-size: 12px;
       height:30px ;
       width: 200px;
+      margin-bottom: 5px;
     }
 
-    tbody   #content {
-      white-space: nowrap; 
-      width: 40px; 
-      height: 40px;
-      font-size: 10px;
-    }
-    tbody #short-content {
-      width: 60px; 
-      height: 40px;
-      font-size: 12px;
-    }
+
     tbody button {
       padding: 1px 4px;
       border-radius: 2px;
@@ -871,10 +836,10 @@ export default {
       margin-top: 8px;
     }
     thead th {
-      font-size: 10px;
+      font-size: 12px;
     }
     tbody tr {
-      font-size: 10px;
+      font-size: 12px;
     }
 
     #form > div {
@@ -882,10 +847,11 @@ export default {
     }
     #form h1 {
       text-align: center;
-      font-size: 14px;
+      font-size: 16px;
+      border-bottom: 1px solid black;
     }
     #form label {
-      font-size: 25px;
+      font-size: 16px;
     }
 
         #form > div {
@@ -894,7 +860,7 @@ export default {
 
     #form textarea {
       padding: 5px 10px;
-      font-size: 12px;
+      font-size: 14px;
     }
 
 
@@ -928,6 +894,7 @@ export default {
     }
     #select-category > div span {
       font-size: 14px;
+      width: 190px;
     }
 
     #select-category > #input-category ,   #create-category input {
