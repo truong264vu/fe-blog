@@ -404,12 +404,13 @@ export default {
             padding: 2px 6px;
             padding-left: 25px;
             border-radius: 4px;
+            font-size: 12px;
         }
         #like-post button:nth-child(1)::before{
           width: 15px;
           height: 15px;
           background-size: 15px 15px;
-          top: 5px;
+          top: 3px;
           left: 6px;
 
         }
@@ -456,7 +457,7 @@ export default {
           width: 80%;
           border: 1px solid black;
           border-radius: 4px;
-          padding: 0px 20px;
+          padding: 0px 10px;
           line-height: 30px;
           outline: none;
         } 

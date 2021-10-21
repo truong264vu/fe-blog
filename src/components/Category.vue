@@ -1,7 +1,6 @@
 <template>
   <div id="category">
            <div v-bind:CategoryId="filter.categoryId = CategoryId" > 
-
                 <div v-for="post in postOfCategory[0].posts" :key="post.id" id="post" title="Read">
                       <h1 @click="POST(post),postPage()">{{post.title}}</h1> 
                       <p>{{post.short_content}}</p>

@@ -120,22 +120,6 @@
                       </div>
                  </div>
         </div>
-
-
-              <div id="notification-delete-category" v-show="notification_delete_category">
-                  <div>
-                    <h1>Delete Category</h1>
-                    <p>Are you sure you want to delete the category : <span>{{category_data.name_delete}}</span> ?</p>
-                  </div>
-                  <div>
-                    <button @click="notification_delete_category = false , deleteCategory()">Yes</button>
-                    <button @click="notification_delete_category = false">No</button>
-                  </div>
-              </div>
-              <div id="background-notification-delete-category" v-show="notification_delete_category"></div>
-
-
-
           <div>
           <label for="content">Content</label>
           <vue-editor style="border: 1px solid black;" v-model="post.content" name="content" ></vue-editor>
@@ -147,7 +131,16 @@
         </div>
     </div>
   </div>
-
+              <div id="notification-delete-category" v-show="notification_delete_category">
+                  <div>
+                    <p>Are you sure you want to delete the category : <span>{{category_data.name_delete}}</span> ?</p>
+                  </div>
+                  <div>
+                    <button @click="notification_delete_category = false , deleteCategory()">Yes</button>
+                    <button @click="notification_delete_category = false">No</button>
+                  </div>
+              </div>
+              <div id="background-notification-delete-category" v-show="notification_delete_category">background-notification-delete-category</div>
 </div>
 </template>
 
@@ -548,7 +541,7 @@ export default {
     }
      #create-category button {
         height: 50px;
-        background: blue;
+        background: rgb(107, 107, 233);
         color: white;
         font-weight: 600;
         padding: 0px 10px;
@@ -621,8 +614,8 @@ export default {
     }
      #notification-delete-category {
       width: 400px;
-      height: 200px;
-      position: absolute;
+      height: 100px;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -634,14 +627,14 @@ export default {
      #notification-delete-category div button {
           margin: 10px;
           padding: 2px 10px;
-          background: blue;
+          background: rgb(107, 107, 233);
           color: white;
           font-weight: 600;
           
     }
      #notification-delete-category span {
        font-weight: 600;
-       font-size: 20px;
+       font-size: 18px;
      }
      #background-notification-delete-category {
         position: fixed;
@@ -650,12 +643,9 @@ export default {
         width: 100%;
         height: 100vh;
         opacity: 30%;
-        background: rgb(102, 16, 16);
+        background: rgb(207, 158, 158);
         z-index: 4;
      }
-
-
-
     #operation-form {
       text-align: right;
     }
@@ -668,6 +658,7 @@ export default {
         font-weight: 600;
         color: white;
         border-radius: 5px;
+        border: none;
     }
     #operation-form button:hover {
       background: #492411;
@@ -777,12 +768,15 @@ export default {
 
      #create-category button {
         height: 30px;
-        background: blue;
+        background: rgb(107, 107, 233);
         color: white;
         font-weight: 600;
         padding: 0px 6px;
         border-radius: 4px;   
         margin: 0px 6px;     
+     }
+     #select-category > div span {
+       font-size: 16px;
      }
     #select-category > #input-category ,   #create-category input {
         width: 200px;
@@ -795,21 +789,21 @@ export default {
 
 
      #notification-delete-category {
-      width: 200px;
+      width: 400px;
       height: 100px;
 
     }
      #notification-delete-category div button {
           margin: 10px;
-          padding: 2px 10px;
-          background: blue;
+          padding: 2px 20px;
+          background: rgb(107, 107, 233);
           color: white;
           font-weight: 600;
-          
+          border: none;
     }
      #notification-delete-category span {
        font-weight: 600;
-       font-size: 14px;
+       font-size: 12px;
      }
      #background-notification-delete-category {
         position: fixed;
@@ -908,8 +902,10 @@ export default {
     #select-category {
       width: 200px;
       position: relative;
+      font-size: 13px;
 
     }
+        
 
     #select-category::after {
         top: 18px;
@@ -927,7 +923,11 @@ export default {
         border: 2px solid #1d0d05;
         z-index: 1;
         border-radius: 5px;
-        transition: top 5s , opacity 1s;;
+        transition: top 5s , opacity 1s;
+        font-size: 13px;
+    }
+    #select-category > div span {
+      font-size: 14px;
     }
 
     #select-category > #input-category ,   #create-category input {
@@ -935,34 +935,34 @@ export default {
         padding: 0px 10px;
         height: 30px;
         border-radius: 2px;
-       font-size: 12px;
+       font-size: 13px;
         margin: 10px 0px;
     }
 
 
      #notification-delete-category {
-      width: 400px;
-      height: 200px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      border: 1px solid black;
-      text-align: center;
-      z-index: 5;
+      width: 320px;
+      height: 100px;
+      font-size: 12px;
     }
      #notification-delete-category div button {
           margin: 10px;
           padding: 2px 10px;
-          background: blue;
+          background: rgb(107, 107, 233);
           color: white;
           font-weight: 600;
+          border: none;
+          border-radius: 3px;
+          width: 50px;
           
     }
      #notification-delete-category span {
        font-weight: 600;
-       font-size: 20px;
+       font-size: 14px;
+       padding-top: 10px;
+     }
+        #notification-delete-category p {
+       padding-top: 10px;
      }
      #background-notification-delete-category {
         position: fixed;
@@ -981,7 +981,7 @@ export default {
      }
     #create-category button {
         height: 30px;
-        background: blue;
+        background: rgb(107, 107, 233);
         color: white;  
         font-size: 12px; 
      }
@@ -1008,6 +1008,7 @@ export default {
         font-weight: 600;
         color: white;
         border-radius: 5px;
+        height: 30px;
     }
 
     #notification  {
@@ -1021,6 +1022,7 @@ export default {
         font-weight: 600;
     }
     #notification  button {
+      height: 30px;
       padding: 2px 10px;
       margin: 4px 14px;
       font-size: 12px;

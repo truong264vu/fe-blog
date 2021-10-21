@@ -53,6 +53,14 @@
         <transition name="slide-fade">
             <div id="right" v-show="menu_max900">
                 <ul>
+                    <li v-if="userLogin == true" id="user">
+                        <div id="avatar">
+                             <img :src="avatar_url.avatar" > 
+                        </div>
+                        <div id="info-user">
+                            <div id="name">{{user.username}}</div>
+                         </div>
+                    </li>
                   <li @click="backHome(),reload(),mene = false" title="Trở về trang chủ">HOME</li>  
                   <li @click="aboutMe(), menu_max900 = false" title="Thông tin của tôi">ME</li>
                   <li @click="INPUT_SEARCH(),backHome(), menu_max900 = false " title="Tìm kiếm bài viết" >
@@ -65,14 +73,7 @@
                 <li @click="SIGNIN_TABLE()" v-if="userLogin == false">Sign In</li>
 
 
-                  <li v-if="userLogin == true" id="user">
-                        <div id="avatar">
-                             <img :src="avatar_url.avatar" > 
-                        </div>
-                        <div id="info-user">
-                            <div id="name">{{user.username}}</div>
-                         </div>
-                    </li>
+
 
                 </ul>
                 </div>
@@ -593,7 +594,7 @@ export default {
             border-bottom: 1px solid rgb(209, 196, 196); 
             margin-left: -20px;     
             font-size: 14px;  
-            padding: 5px 10px;
+            padding: 4px 10px;
             line-height: 10px;
          }
             .slide-fade-enter-active {
@@ -637,8 +638,10 @@ export default {
         
          }
         #right #info-user #name {
-            font-size: 14px;
-            margin-top: 4px;
+            font-size: 17px;
+            margin-top: -4px;
+            padding-top: 8px;
+            
         }
         .navbar #search  {
         width: 20px;

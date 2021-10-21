@@ -338,11 +338,13 @@ export default {
         display: flex;
         justify-content: center;
         margin-left: -80px;
+        
         }
     .header .main-header #category ul li  {
         font-size: 14px;
         padding: 2px 6px;
         border-radius: 2px;
+        border-bottom: 1px solid white;
         /* font-weight: 600; */
     }
     .container {
