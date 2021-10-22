@@ -363,12 +363,13 @@ export default {
         color: rgb(49, 44, 44);
     }
     .container {
-        width: 96%;
+        width: 100%;
         margin: 0px auto;
         text-align: left;
     }
     .container #post {
         margin: 50px 0px;
-    }
+        padding: 30px;
+     }
      }
 </style>
